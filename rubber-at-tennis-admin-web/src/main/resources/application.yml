@@ -7,5 +7,5 @@ spring:
   application:
     name: wx_at_atp_api_web
   profiles:
-    active: pre
+    active: dev
 
