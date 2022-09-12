@@ -29,7 +29,7 @@ public class AutoTaskService {
     /**
      * 每周五的1点执行 自动更新atp球员信息
      */
-    @Scheduled(cron = "0 0 1 ? * 5")
+    //@Scheduled(cron = "0 0 1 ? * 5")
     public void taskAtpInfo()  {
         playerInfoDatasourceService.startAtpPlayerInfoReptileTask();
     }
@@ -38,7 +38,7 @@ public class AutoTaskService {
     /**
      * 每周五的2点执行 自动更新wta球员信息
      */
-    @Scheduled(cron = "0 0 2 ? * 5")
+    // @Scheduled(cron = "0 0 2 ? * 5")
     public void taskWtaInfo(){
         playerInfoDatasourceService.startWtaPlayerInfoReptileTask();
     }
