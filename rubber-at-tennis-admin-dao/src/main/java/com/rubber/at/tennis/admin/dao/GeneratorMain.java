@@ -19,7 +19,7 @@ public class GeneratorMain extends MybatisBaseCodeGenerator {
         configBean.setUserName("root");
         configBean.setPassword("root");
         GeneratorMain codeGenerator = new GeneratorMain(configBean);
-        codeGenerator.create("t_atp_player_info","t_wta_player_info");
+        codeGenerator.create("t_invite_info");
     }
 
 }

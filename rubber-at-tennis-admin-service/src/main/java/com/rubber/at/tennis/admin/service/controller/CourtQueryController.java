@@ -1,7 +1,7 @@
 package com.rubber.at.tennis.admin.service.controller;
 
-import com.rubber.at.tennis.admin.dao.dal.IPlayerRankInfoDal;
-import com.rubber.at.tennis.admin.dao.entity.PlayerRankInfoEntity;
+import com.rubber.at.tennis.admin.dao.dal.ITennisCourtMapDal;
+import com.rubber.at.tennis.admin.dao.entity.TennisCourtMapEntity;
 import com.rubber.base.components.mysql.plugins.admin.BaseAdminController;
 import com.rubber.base.components.mysql.plugins.admin.page.PageModel;
 import com.rubber.base.components.mysql.plugins.admin.page.SortType;
@@ -13,16 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author luffyu
- * Created on 2022/8/27
+ * Created on 2022/9/25
  */
-@RequestMapping("/rank")
+@RequestMapping("/court")
 @RestController
-public class RankQueryController extends BaseAdminController {
-
-
+public class CourtQueryController  extends BaseAdminController {
 
     @Autowired
-    private IPlayerRankInfoDal iPlayerRankInfoDal;
+    private ITennisCourtMapDal iTennisCourtMapDal;
 
     /**
      * 分页查询
@@ -33,12 +31,11 @@ public class RankQueryController extends BaseAdminController {
     public ResultMsg list(String json){
         PageModel pageModel = decodeForJsonString(json);
         if (pageModel.getOrder() == null){
-            pageModel.setSort(new String[]{"rank"});
-            pageModel.setOrder(SortType.asc);
+            pageModel.setSort(new String[]{"id"});
+            pageModel.setOrder(SortType.desc);
         }
-        return ResultMsg.success(iPlayerRankInfoDal.pageBySelect(pageModel, PlayerRankInfoEntity.class, null));
+        return ResultMsg.success(iTennisCourtMapDal.pageBySelect(pageModel, TennisCourtMapEntity.class, null));
     }
-
 
 
 }
