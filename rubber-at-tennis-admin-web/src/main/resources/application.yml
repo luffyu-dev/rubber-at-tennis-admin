@@ -1,7 +1,7 @@
 server:
   port: 38003
   servlet:
-    context-path: /oa-api/at-admin
+    context-path: /oa-api/aiTennis
 
 spring:
   application:
