@@ -3,7 +3,7 @@ package com.rubber.at.tennis.admin.service.task;
 
 import com.rubber.at.tennis.admin.dao.dal.ITaskInfoDal;
 import com.rubber.at.tennis.admin.dao.entity.TaskInfoEntity;
-import com.rubber.at.tennis.map.api.task.TaskTypeEnums;
+import com.rubber.at.tennis.atp.api.task.TaskTypeEnums;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Date;
